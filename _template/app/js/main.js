@@ -327,7 +327,7 @@ var Astrum = new Vue({
         breakpoint: 960,
         mobile_view: false,
         open_nav: false,
-        rtime: new Date(1, 1, 2000, 12,00,00),
+        rtime: new Date(1, 1, 2000, 12,0,0),
         timeout: false,
         delta: 200,
         return_load_time: false,

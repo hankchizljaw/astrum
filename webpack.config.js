@@ -1,10 +1,21 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './_template/app/js/main.js',
+    entry: __dirname + '/_template/app/js/main.js',
     output: {
-        path: './_template/app/js',
+        path: __dirname + '/_template/app/js',
         filename: 'main.min.js'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
